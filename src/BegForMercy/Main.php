@@ -24,17 +24,12 @@ class Main extends PluginBase implements Listener {
 	}
 
 	public function onMove(PlayerMoveEvent $event){
-
 		$world = $event->getPlayer()->getLevel()->getName();
-
 		$worlds = $this->getConfig()->get("disable-hunger");
-
-          if(in_array($world, $worlds)){
-		  
+          if(in_array($world, $worlds)){		  
 		  $player = $ev->getPlayer();
         $player->setFood(20);
-		  $player->setFoodEnabled(0);
-          
+		  $player->setFoodEnabled(0);         
 	     } else {
 	  	  $player = $ev->getPlayer();
 	  	  $player->setFoodEnabled(1);
