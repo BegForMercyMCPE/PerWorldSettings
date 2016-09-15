@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener {
 		if($player->hasPermission("break.bypass")){
 			return true;
 			} elseif($player->getLevel()->getName() == $world){
-				 	$this->getConfig()->get(in_array("disable-break", $world));
+				 	$this->getConfig()->get(in_array($world, "disable-break"));
 				$event->setCancelled();
 	}
 	}
@@ -51,7 +51,7 @@ class Main extends PluginBase implements Listener {
 		if($player->hasPermission("place.bypass")){
 			return true;
 			} elseif($player->getLevel()->getName() == $world){
-				 	$this->getConfig()->get(in_array("disable-place", $world));
+				 	$this->getConfig()->get(in_array($world, "disable-place"));
 				$event->setCancelled();
 	}
 	}
