@@ -1,1 +1,16 @@
+name: PerWorldSettings
+main: BegForMercy\Main
+version: 1.0.0
+api: 2.0.0
+load: POSTWORLD
+description: PerWorld settings!
+
+permissions:
+    break.use:
+        description: "Allows players to break blocks in world!"
+        default: false
+permissions:
+    place.use:
+        description: "Allows players to place blocks in world!"
+        default: false
 
