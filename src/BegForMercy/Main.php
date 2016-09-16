@@ -7,6 +7,8 @@ use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
