@@ -36,22 +36,26 @@ class Main extends PluginBase implements Listener {
 	    }
 	  }
 	
-	 		public function onBlockBreak(BlockBreakEvent $event){
+	 public function onBlockBreak(BlockBreakEvent $event){
 		$player = $event->getPlayer();
 		 $w = $player->getLevel()->getName();
 		 	 $break = $this->getConfig()->get("disable-break");
-		if($player->hasPermission("break.bypass") && in_array($w, $break)){
+				if(in_array($w, $break)){						
+		if($player->hasPermission("break.bypass")){
 			return true;
 			} else($event->setCancelled());
+         	}
 	}
 	
 	public function onBlockPlace(BlockPlaceEvent $event1){
 		$player = $event1->getPlayer();
 		 $w1 = $player->getLevel()->getName();
 		 	 $place = $this->getConfig()->get("disable-place");
-		if($player->hasPermission("place.bypass") && in_array($w1, $place)){
+				if(in_array($w1, $place)){
+		if($player->hasPermission("place.bypass")){
 			return true;
-			} else($event1->setCancelled());
+			} else($event1->setCancelled());				
+		}
 	}
 
 	public function onDisable(){
