@@ -9,6 +9,8 @@ use pocketmine\Server;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
@@ -59,6 +61,22 @@ class Main extends PluginBase implements Listener {
 			} else($event1->setCancelled());				
 		}
 	}
+
+   public function onEntityDamage(EntityDamageEvent $event) {
+        if ($event instanceof EntityDamageByEntityEvent) {
+            $player = $event->getEntity(); 
+            $player = $event->getDamager();  
+        if($player instanceof Player){
+	 $w = $player->getLevel()->getName();
+		 $pvp =	$this->getConfig()->get("disable-pvp");
+			if(in_array($w, $pvp)){
+		if($player->hasPermission("pvp.bypass")){
+			return true;
+			} else($event->setCancelled());
+                }	        
+            }             
+        }
+    }
 
 	public function onDisable(){
 		$this->getLogger()->info("Disbled");
