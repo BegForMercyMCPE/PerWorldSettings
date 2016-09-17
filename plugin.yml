@@ -13,4 +13,9 @@ permissions:
     place.use:
         description: "Allows players to place blocks in world!"
         default: false
+permissions:
+    pvp.use:
+        description: "Allows players to pvp in world!"
+        default: false
+
 
