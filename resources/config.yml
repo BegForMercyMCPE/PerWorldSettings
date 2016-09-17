@@ -1,10 +1,13 @@
 #Worlds you want to disable PvP.
+Permission: pvp.bypass
 disable-pvp: ["example", "example2"]
 
 #Worlds you want to disable block break.
+#Permission: break.bypass
 disable-break: ["example", "example2"]
 
 #Worlds you want to disable block place.
+#Permission: place.bypass
 disable-place: ["example", "example2"]
 
 #Worlds you want to disable hunger. 
