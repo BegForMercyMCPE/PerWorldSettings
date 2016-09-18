@@ -78,6 +78,16 @@ class Main extends PluginBase implements Listener {
         }
     }
 
+        public function onExplode(ExplosionPrimeEvent $event) {       
+	       	$entity = $event->getEntity();
+		         $w = $entity->getLevel()->getName();
+		 	    	 $tnt =	$this->getConfig()->get("disable-tnt");
+			    		if(in_array($w, $tnt)){						
+               $event->setBlockBreaking(false);
+                $event->setDamage(0);
+		       	} 
+       	}
+
 	public function onDisable(){
 		$this->getLogger()->info("Disbled");
 	}
