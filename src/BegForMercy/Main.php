@@ -11,6 +11,7 @@ use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\ExplosionPrimeEvent
 use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
