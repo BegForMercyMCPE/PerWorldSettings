@@ -1,13 +1,10 @@
 #Worlds you want to disable PvP.
-Permission: pvp.bypass
 disable-pvp: ["example", "example2"]
 
 #Worlds you want to disable block break.
-#Permission: break.bypass
 disable-break: ["example", "example2"]
 
 #Worlds you want to disable block place.
-#Permission: place.bypass
 disable-place: ["example", "example2"]
 
 #Worlds you want to disable hunger. 
@@ -15,9 +12,6 @@ disable-hunger: ["example", "example2"]
 
 #Worlds you want to disable regeneration. Good for Hardcore world.
 disable-regen: ["example", "example2"]
-
-#Worlds you want to disable flowing waters/lavas. Minimise the lag and grief.
-disable-flow: ["example", "example2"]
 
 #Worlds you want to disable explosion blocks break.
 disable-tnt: ["example", "example2"]
