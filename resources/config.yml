@@ -19,4 +19,5 @@ disable-regen: ["example", "example2"]
 #Worlds you want to disable flowing waters/lavas. Minimise the lag and grief.
 disable-flow: ["example", "example2"]
 
-
+#Worlds you want to disable explosion blocks break.
+disable-tnt: ["example", "example2"]
