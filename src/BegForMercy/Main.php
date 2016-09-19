@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener {
 		$world = $event->getPlayer()->getLevel()->getName();
 		$food = $this->getConfig()->get("disable-hunger");
           if(in_array($world, $food)){
-		  $player = $ev->getPlayer();
+		  $player = $event->getPlayer();
         $player->setFood(20);
 		  $player->setFoodEnabled(0);        
 	     } else {
